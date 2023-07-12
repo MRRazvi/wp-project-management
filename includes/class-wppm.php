@@ -11,5 +11,8 @@ class WPPM
     {
         require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-wppm-admin.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-wppm-public.php';
+
+        new WPPM_Admin();
+        new WPPM_Public();
     }
 }
