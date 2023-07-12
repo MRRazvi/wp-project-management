@@ -10,4 +10,13 @@ if (!defined('WPINC')) {
     die;
 }
 
-define('WP_PROJECT_MANAGEMENT_VERSION', '0.0.1');
+// plugin constants
+define('WPPM_VERSION', '0.0.1');
+
+// activation
+register_activation_hook(__FILE__, function () {
+    plugin_dir_path(__FILE__) . 'includes/class-wppm-activator.php';
+    WPPM_Activator::activate();
+});
+
+// deactivation
