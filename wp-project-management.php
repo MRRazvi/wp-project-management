@@ -11,6 +11,7 @@ if (!defined('WPINC')) {
 }
 
 // plugin constants
+define('WPPM_NAME', 'wppm');
 define('WPPM_VERSION', '0.0.1');
 
 // activation
