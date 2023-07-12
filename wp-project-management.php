@@ -24,3 +24,13 @@ register_deactivation_hook(__FILE__, function () {
     require_once plugin_dir_path(__FILE__) . 'includes/class-wppm-deactivator.php';
     WPPM_Deactivator::deactivate();
 });
+
+// core plugin class
+require plugin_dir_path(__FILE__) . 'includes/class-wppm.php';
+
+function run_wppm()
+{
+    $plugin = new WPPM();
+}
+
+run_wppm();
