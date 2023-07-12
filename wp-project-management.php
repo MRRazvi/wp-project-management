@@ -28,10 +28,4 @@ register_deactivation_hook(__FILE__, function () {
 
 // core plugin class
 require plugin_dir_path(__FILE__) . 'includes/class-wppm.php';
-
-function run_wppm()
-{
-    $plugin = new WPPM();
-}
-
-run_wppm();
+new WPPM();
